@@ -1,9 +1,10 @@
 import { Sunflower, Geist_Mono } from "next/font/google";
-import '@/styles/globals.css';
+import "@/styles/globals.css";
+import Header from "@/components/layout/Header";
 
-const sunflower = Sunflower({ 
-  weight: ['300', '500', '700'], // Specify available weights
-  subsets: ['latin'] // Required subset
+const sunflower = Sunflower({
+  weight: ["300", "500", "700"], // Specify available weights
+  subsets: ["latin"], // Required subset
 });
 
 const geistMono = Geist_Mono({
@@ -22,7 +23,8 @@ export default function RootLayout({ children }) {
       <body
         className={`${sunflower.className} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Header />
+        <main>{children}</main>
       </body>
     </html>
   );
