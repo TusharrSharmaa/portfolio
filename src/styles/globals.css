@@ -1,4 +1,6 @@
 @import "tailwindcss";
+/* @import "tailwindcss/preflight"; */
+@tailwind utilities;
 
 @theme {
   --font-sans: var(--font-sunflower);
@@ -17,13 +19,468 @@
   }
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+html {
+	scroll-behavior: smooth;
+  overscroll-behavior: none;
+}
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+	position: relative;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+  overscroll-behavior: none;
 }
+
+
+
+
+/* container */
+  .container {
+    @apply relative w-full max-w-[1800px] mx-auto px-6;
+  }
   
+  @screen md {
+    .container {
+      @apply px-10;
+    }
+  }
+  @screen xl {
+    .container {
+      @apply px-[72px] max-w-[1184px];
+    }
+  }
+  @screen 2xl {
+    .container {
+      @apply px-[96px] max-w-[1424px];
+    }
+  }
+
+  /* section */
+  section {
+    @apply w-full relative py-8 overflow-hidden;
+  }
+  @screen md {
+    section {
+      @apply py-10;
+    }
+  }
+  @screen xl {
+    section {
+      @apply py-[60px];
+    }
+  }
+  @screen 2xl {
+    section {
+      @apply py-[70px];
+    }
+  }
+
+  .padding-sm {
+    @apply py-7;
+  }
+  @screen md {
+    .padding-sm {
+      @apply py-8;
+    }
+  }
+  @screen xl {
+    .padding-sm {
+      @apply py-10;
+    }
+  }
+  @screen 2xl {
+    .padding-sm {
+      @apply py-[60px];
+    }
+  }
+
+  .padding-sm-top {
+    @apply pt-7;
+  }
+  @screen md {
+    .padding-sm-top {
+      @apply pt-8;
+    }
+  }
+  @screen xl {
+    .padding-sm-top {
+      @apply pt-10;
+    }
+  }
+  @screen 2xl {
+    .padding-sm-top {
+      @apply pt-[60px];
+    }
+  }
+
+  .padding-sm-bottom {
+    @apply pb-7;
+  }
+  @screen md {
+    .padding-sm-bottom {
+      @apply pb-8;
+    }
+  }
+  @screen xl {
+    .padding-sm-bottom {
+      @apply pb-10;
+    }
+  }
+  @screen 2xl {
+    .padding-sm-bottom {
+      @apply pb-[60px];
+    }
+  }
+
+  .padding-md {
+    @apply py-10;
+  }
+  @screen md {
+    .padding-md {
+      @apply py-[60px];
+    }
+  }
+  @screen xl {
+    .padding-md {
+      @apply py-[70px];
+    }
+  }
+  @screen 2xl {
+    .padding-md {
+      @apply py-[80px];
+    }
+  }
+
+  .padding-md-top {
+    @apply pt-10;
+  }
+  @screen md {
+    .padding-md-top {
+      @apply pt-[60px];
+    }
+  }
+  @screen xl {
+    .padding-md-top {
+      @apply pt-[70px];
+    }
+  }
+  @screen 2xl {
+    .padding-md-top {
+      @apply pt-[80px];
+    }
+  }
+
+  .padding-md-bottom {
+    @apply pb-10;
+  }
+  @screen md {
+    .padding-md-bottom {
+      @apply pb-[60px];
+    }
+  }
+  @screen xl {
+    .padding-md-bottom {
+      @apply pb-[70px];
+    }
+  }
+  @screen 2xl {
+    .padding-md-bottom {
+      @apply pb-[80px];
+    }
+  }
+
+  .padding-lg {
+    @apply py-[60px];
+  }
+  @screen md {
+    .padding-lg {
+      @apply py-[70px];
+    }
+  }
+  @screen xl {
+    .padding-lg {
+      @apply py-[80px];
+    }
+  }
+  @screen 2xl {
+    .padding-lg {
+      @apply py-[120px];
+    }
+  }
+
+  .padding-lg-top {
+    @apply pt-[60px];
+  }
+  @screen md {
+    .padding-lg-top {
+      @apply pt-[70px];
+    }
+  }
+  @screen xl {
+    .padding-lg-top {
+      @apply pt-[80px];
+    }
+  }
+  @screen 2xl {
+    .padding-lg-top {
+      @apply pt-[120px];
+    }
+  }
+
+
+  .padding-lg-bottom {
+    @apply pb-[60px];
+  }
+  @screen md {
+    .padding-lg-bottom {
+      @apply pb-[70px];
+    }
+  }
+  @screen xl {
+    .padding-lg-bottom {
+      @apply pb-[80px];
+    }
+  }
+  @screen 2xl {
+    .padding-lg-bottom {
+      @apply pb-[120px];
+    }
+  }
+
+  .padding-xl {
+    @apply py-[70px];
+  }
+  @screen md {
+    .padding-xl {
+      @apply py-[80px];
+    }
+  }
+  @screen xl {
+    .padding-xl {
+      @apply py-[120px];
+    }
+  }
+  @screen 2xl {
+    .padding-xl {
+      @apply py-[160px];
+    }
+  }
+
+  .padding-xl-top {
+    @apply pt-[70px];
+  }
+  @screen md {
+    .padding-xl-top {
+      @apply pt-[80px];
+    }
+  }
+  @screen xl {
+    .padding-xl-top {
+      @apply pt-[120px];
+    }
+  }
+  @screen 2xl {
+    .padding-xl-top {
+      @apply pt-[160px];
+    }
+  }
+
+  .padding-xl-bottom {
+    @apply pb-[70px];
+  }
+  @screen md {
+    .padding-xl-bottom {
+      @apply pb-[80px];
+    }
+  }
+  @screen xl {
+    .padding-xl-bottom {
+      @apply pb-[120px];
+    }
+  }
+  @screen 2xl {
+    .padding-xl-bottom {
+      @apply pb-[160px];
+    }
+  }
+
+  .no-padding {
+    @apply py-0;
+  }
+  .no-padding-top {
+    @apply pt-0;
+  }
+  .no-padding-bottom {
+    @apply pb-0;
+  }
+
+/* Typography */
+
+h1,
+.h1,
+.h1 span {
+  @apply text-[56px] leading-[110%] font-bold;
+}
+@screen md {
+  h1,
+  .h1,
+  .h1 span {
+    @apply text-[64px]
+  }
+}
+@screen xl {
+  h1,
+  .h1,
+  .h1 span {
+    @apply text-[72px]
+  }
+}
+@screen 2xl {
+  h1,
+  .h1,
+  .h1 span {
+    @apply text-[80px]
+  }
+}
+
+h2,
+h2 span,
+.h2 {
+  @apply text-[36px] leading-[110%] font-bold;
+}
+@screen md {
+  h2,
+  h2 span,
+  .h2 {
+    @apply text-[42px]
+  }
+}
+@screen xl {
+  h2,
+  h2 span,
+  .h2 {
+    @apply text-[48px]
+  }
+}
+@screen 2xl {
+  h2,
+  h2 span,
+  .h2 {
+    @apply text-[56px]
+  }
+}
+
+h3,
+.h3 {
+  @apply text-[30px] leading-[110%] font-bold;
+}
+@screen xl {
+  h3,
+  .h3 {
+    @apply text-[32px]
+  }
+}
+@screen 2xl {
+  h3,
+  .h3 {
+    @apply text-[40px]
+  }
+}
+
+h4,
+.h4 {
+  @apply text-[24px] leading-tight font-semibold;
+}
+@screen xl {
+  h4,
+  .h4 {
+    @apply text-[26px]
+  }
+}
+@screen 2xl {
+  h4,
+  .h4 {
+    @apply text-[30px]
+  }
+}
+
+h5,
+.h5 {
+  @apply text-[21px] leading-tight font-semibold;
+}
+@screen xl {
+  h5,
+  .h5 {
+    @apply text-[22px]
+  }
+}
+@screen 2xl {
+  h5,
+  .h5 {
+    @apply text-[24px]
+  }
+}
+
+h6,
+.h6 {
+  @apply text-[19px] leading-tight font-semibold;
+}
+@screen xl {
+  h6,
+  .h6 {
+    @apply text-[20px]
+  }
+}
+@screen 2xl {
+  h6,
+  .h6 {
+    @apply text-[22px]
+  }
+}
+
+p,
+.body-default {
+  @apply text-[15px] !leading-snug font-normal;
+}
+@screen xl {
+  p,
+.body-default {
+    @apply text-base;
+  }
+}
+
+.body-medium,
+.body-medium p {
+  @apply text-base !leading-snug font-normal;
+}
+@screen xl {
+.body-medium,
+.body-medium p {
+    @apply text-lg;
+  }
+}
+
+.body-large,
+.body-large p {
+  @apply text-lg !leading-snug font-normal;
+}
+@screen xl {
+.body-large,
+.body-large p {
+    @apply text-xl;
+  }
+}
+
+@keyframes textShine {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
